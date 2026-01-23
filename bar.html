@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar & Lounge Menu | The Grand Oasis</title>
+    <style>
+        /* --- Consistent Theme Styles --- */
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu-container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h1 { 
+            font-size: 2.8rem; 
+            color: #1a1a1a; 
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: #b8926a;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            border: 1px solid #b8926a;
+            padding: 8px 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            color: #b8926a;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 40px 0 20px 0;
+            border-bottom: 2px solid #e5e5e5;
+            padding-bottom: 10px;
+        }
+
+        /* --- Menu Card Styles --- */
+        .menu-card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            transition: transform 0.2s;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Signature Highlight */
+        .signature-card {
+            border-left: 5px solid #b8926a;
+            background: #fffdf9;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .item-title {
+            font-size: 1.1rem;
+            color: #1a1a1a;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .item-price {
+            color: #b8926a;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .item-description {
+            color: #666;
+            font-style: italic;
+            font-size: 0.9rem;
+            margin: 8px 0 0 0;
+        }
+
+        .badge {
+            background: #b8926a;
+            color: white;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 40px;
+            color: #999;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 600px) {
+            .item-header { flex-direction: column; }
+            .item-price { margin-top: 5px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-container">
+        <header>
+            <a href="hotel.html" class="back-btn">← Back to Home</a>
+            <h1>Bar & Lounge</h1>
+            <p>Crafted spirits and refreshing blends</p>
+        </header>
+
+        <h2 class="section-title">Signature Cocktails</h2>
+
+        <div class="menu-card signature-card">
+            <div class="item-header">
+                <h3 class="item-title">Heritage special</h3>
+                <span class="item-price">1850/=</span>
+            </div>
+            <p class="item-description">Our house specialty: Rum, gin, vodka, energy drink, coke.</p>
+            <span class="badge">Must Try</span>
+        </div>
+
+        <div class="menu-card signature-card">
+            <div class="item-header">
+                <h3 class="item-title">Red Calypso</h3>
+                <span class="item-price">1950/=</span>
+            </div>
+            <p class="item-description">Iced tea, lemon, lime juice, simple syrup, whiskey, coca-cola.</p>
+            <span class="badge">Signature</span>
+        </div>
+
+        <h2 class="section-title">Classic Cocktails</h2>
+
+        <div class="menu-card">
+            <div class="item-header">
+                <h3 class="item-title">Classic Margarita</h3>
+                <span class="item-price">1650/=</span>
+            </div>
+            <p class="item-description">Tequila, triple sec, and fresh lime juice served with a salted rim.</p>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-header">
+                <h3 class="item-title">Old Fashioned</h3>
+                <span class="item-price">1750/=</span>
+            </div>
+            <p class="item-description">Bourbon whiskey, bitters, and a touch of sugar garnished with orange peel.</p>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-header">
+                <h3 class="item-title">Moscow Mule</h3>
+                <span class="item-price">1800/=</span>
+            </div>
+            <p class="item-description">Vodka, lime mint, ginger beer.</p>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-header">
+                <h3 class="item-title">Mojito</h3>
+                <span class="item-price">1550/=</span>
+            </div>
+            <p class="item-description">White rum, fresh mint leaves, lime wedges, and soda water.</p>
+        </div>
+
+        <h2 class="section-title">Mocktails</h2>
+
+        <div class="menu-card">
+            <div class="item-header">
+                <h3 class="item-title">Virgin Piña Colada</h3>
+                <span class="item-price">950/=</span>
+            </div>
+            <p class="item-description">A creamy blend of coconut milk and fresh pineapple juice.</p>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-header">
+                <h3 class="item-title">Heritage Fizz</h3>
+                <span class="item-price">1050/=</span>
+            </div>
+            <p class="item-description">Green apple, red apple, lemon.</p>
+        </div>
+
+        <footer>
+            <p>Please drink responsibly. Minimum age requirement is 21 years.</p>
+            <p>© Ella Heritage Hotel & Restaurant.</p>
+        </footer>
+    </div>
+
+</body>
+</html>

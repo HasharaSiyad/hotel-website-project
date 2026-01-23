@@ -1,0 +1,398 @@
+/* style.css */
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+body { 
+    font-family: 'Georgia', serif; 
+    line-height: 1.6; 
+    color: #2c3e50; 
+    background-color: #FFFAF0; 
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* This centers the logo and text vertically */
+    gap: 15px;           /* Space between the logo and the name */
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #b8926a;      /* Matching your gold theme */
+}
+
+.header-logo {
+    height: 100px;        /* Adjust this to make your logo bigger or smaller */
+    width: auto;         /* Keeps the logo's original proportions */
+    object-fit: contain;
+}
+
+/* Optional: Make the logo slightly smaller on mobile */
+@media (max-width: 600px) {
+    .header-logo {
+        height: 30px;
+    }
+}
+
+/* Navigation */
+nav {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { 
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    letter-spacing: 2px; 
+    color: #1a1a1a; 
+}
+
+nav ul { list-style: none; display: flex; }
+nav ul li { margin-left: 20px; }
+nav ul li a { 
+    text-decoration: none; 
+    color: #555; 
+    font-size: 0.9rem; 
+    text-transform: uppercase; 
+}
+
+/* Hero Image */
+.hero {
+    height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('photo1.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-text h1 { font-size: 3.5rem; margin-bottom: 10px; }
+
+/* Main Content Container */
+.container { max-width: 1100px; margin: auto; padding: 60px 20px; }
+
+h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; font-weight: 300; }
+
+/* Room Details Grid */
+.room-grid {
+    display: grid;
+    /* This creates 4 equal columns */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px;
+    width: 100%;
+}
+
+.room-card {
+    background: #fff;
+    border: 1px solid #eee;
+    text-align: left;
+}
+
+.room-card img {
+    .room-card img {
+    width: 100%;      /* Keeps the image filling the card width */
+    height: 50px;     /* Change this number (e.g., 120px) to make it even smaller */
+    object-fit: cover; /* This prevents the image from looking stretched */
+}
+}
+
+/* Important: Make sure the container is wide enough to hold 4 rooms */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Restaurant Section */
+
+.menu-image-nav {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.menu-card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    text-decoration: none;
+    display: flex;
+    align-items: flex-end; /* Puts text at the bottom */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card-info {
+    width: 100%;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8)); /* Darkens bottom for text readability */
+}
+
+.arrow {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.menu-card:hover .arrow {
+    transform: translateX(10px); /* Arrow moves right on hover */
+}
+
+
+/* Gallery Styles */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    height: 200px; /* Set a fixed height for a uniform look */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images don't stretch */
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+/* Zoom effect when you hover over a photo */
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+/* Reviews Section */
+.review-box { 
+    background: #f9f9f9; 
+    padding: 30px; 
+    margin-bottom: 20px; 
+    font-style: italic; 
+    border-radius: 8px; 
+}
+
+/* Booking Form */
+.booking-form { background: #1a1a1a; color: white; padding: 40px; border-radius: 8px; }
+.booking-form h2 { color: white; border: none; }
+.booking-form input, .booking-form select { 
+    width: 100%; 
+    padding: 12px; 
+    margin: 10px 0; 
+    border: none; 
+    border-radius: 4px; 
+}
+
+.btn { 
+    background: #b8926a; 
+    color: white; 
+    border: none; 
+    padding: 15px 30px; 
+    cursor: pointer; 
+    width: 100%; 
+    font-size: 1rem; 
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.btn:hover { background: #a67f56; }
+
+footer { text-align: center; padding: 40px; background: #eee; margin-top: 50px; font-size: 0.8rem; }
+
+
+
+
+
+/* Booking Section */
+.booking-links {
+    background: #fdfdfd;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.external-btn {
+    padding: 15px 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: transform 0.2s, opacity 0.2s;
+    min-width: 200px;
+    display: inline-block;
+}
+
+.external-btn:hover { transform: translateY(-3px); opacity: 0.9; }
+
+/* Brand Colors */
+.btn-booking { background-color: #003580; } /* Booking.com Blue */
+.btn-tripadvisor { background-color: #34e0a1; color: #000; } /* TripAdvisor Green */
+.btn-google { background-color: #4285F4; } /* Google Blue */
+
+/* Section Headers */
+h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; font-weight: 300; }
+
+/* Grid and Cards (From previous steps) */
+.container { max-width: 1100px; margin: auto; padding: 60px 20px; }
+.room-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.room-card { border: 1px solid #eee; overflow: hidden; background: #fff; }
+.room-card img { width: 100%; height: 250px; object-fit: cover; }
+.room-info { padding: 20px; }
+.price { color: #b8926a; font-weight: bold; }
+
+
+.main-footer {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    padding: 80px 0 20px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+/* Brand Section Styling */
+.footer-logo {
+    color: #b8926a; /* Gold color */
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+.tagline {
+    font-style: italic;
+    color: #b8926a;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #bbb;
+}
+
+/* Links & Headings */
+.footer-section h3 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.footer-section h3::after {
+    content: '';
+    width: 40px;
+    height: 2px;
+    background: #b8926a;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #b8926a;
+}
+
+/* Contact Items */
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 12px;
+}
+
+.contact-item a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.contact-item .icon {
+    color: #b8926a;
+}
+
+/* Copyright Bar */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #333;
+    margin-top: 50px;
+    padding-top: 25px;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-section h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .contact-item {
+        justify-content: center;
+    }
+}

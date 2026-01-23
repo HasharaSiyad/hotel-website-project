@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Menu | Ella Heritage Restaurant</title>
+    <style>
+        :root {
+            --gold: #b8926a;
+            --dark: #1a1a1a;
+            --grey: #666;
+            --bg: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu-container {
+            max-width: 950px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 30px;
+        }
+
+        .back-btn {
+            text-decoration: none;
+            color: var(--gold);
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            border: 1px solid var(--gold);
+            padding: 8px 20px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover { background: var(--gold); color: white; }
+
+        .section-title {
+            color: var(--gold);
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            margin: 50px 0 25px 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-title::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #ddd;
+        }
+
+        /* Menu Card Design */
+        .menu-card {
+            background: white;
+            padding: 20px 25px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+            transition: transform 0.2s;
+        }
+
+        .menu-card:hover { transform: translateY(-2px); }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .item-title { font-size: 1.2rem; color: var(--dark); margin: 0; }
+        .item-price { color: var(--gold); font-weight: bold; font-family: sans-serif; }
+        .item-desc { color: var(--grey); font-style: italic; font-size: 0.9rem; margin: 5px 0 0 0; }
+
+        /* Traditional Highlight */
+        .traditional-card {
+            border-left: 5px solid var(--gold);
+            background: #fffdf9;
+        }
+
+        .badge {
+            background: var(--gold);
+            color: white;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+
+        @media (max-width: 600px) {
+            .item-header { flex-direction: column; }
+            .item-price { margin-top: 5px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="menu-container">
+    <header>
+        <a href="hotel.html" class="back-btn">← Back to Home</a>
+        <h1>À La Carte Selection</h1>
+        <p>Experience the finest flavours of Ella</p>
+    </header>
+
+    <h2 class="section-title">Traditional Sri Lankan</h2>
+    <div class="menu-card traditional-card">
+        <span class="badge">Signature</span>
+        <div class="item-header">
+            <h3 class="item-title">Traditional Rice & Curry</h3>
+            <span class="item-price">1450/=</span>
+        </div>
+        <p class="item-desc">Served with 5 vegetable curries, dhal, papadum, and choice of meat.</p>
+    </div>
+    <div class="menu-card traditional-card">
+        <div class="item-header">
+            <h3 class="item-title">Lampraise</h3>
+            <span class="item-price">1850/=</span>
+        </div>
+        <p class="item-desc">Banana leaf wrapped rice with frikkadels, blachan, and seeni sambol.</p>
+    </div>
+
+    <h2 class="section-title">Starters</h2>
+    <div class="menu-card">
+        <div class="item-header"><h3 class="item-title">Chicken Salad Delight</h3><span class="item-price">1250/=</span></div>
+        <p class="item-desc">Diced chicken with mango/yogurt, mixed greens, avocado, and tomato.</p>
+    </div>
+    <div class="menu-card">
+        <div class="item-header"><h3 class="item-title">Tom Yum Soup</h3><span class="item-price">950/=</span></div>
+        <p class="item-desc">Lemongrass, lime, chilli and mushroom, in optional prawn/chicken.</p>
+    </div>
+    <div class="menu-card">
+        <div class="item-header"><h3 class="item-title">Cream of Chicken Soup</h3><span class="item-price">850/=</span></div>
+        <p class="item-desc">Tender chicken, herbs, hint of garlic.</p>
+    </div>
+    <div class="menu-card">
+        <div class="item-header"><h3 class="item-title">Loaded Fries</h3><span class="item-price">1100/=</span></div>
+        <p class="item-desc">Sprese sause, mayo, french fries, crispy chicken.</p>
+    </div>
+    <div class="menu-card">
+        <div class="item-header"><h3 class="item-title">Variety Omelets</h3><span class="item-price">750/=</span></div>
+    </div>
+
+    <h2 class="section-title">Burgers & Submarines</h2>
+    <div class="menu-card">
+        <div class="item-header"><h3 class="item-title">Teriaki Chicken Burger</h3><span class="item-price">1250/=</span></div>
+        <p class="item-desc">Grilled chicken glazed in teriaki sause, layerd with crispy lettuce, tomato, mayo.</p>
+    </div>
+    <div class="menu-card">
+        <div class="item-header"><h3 class="item-title">Classic Cheese Burger</h3><span class="item-price">1150/=</span></div>
+        <p class="item-desc">beef patty with melted cheese, lettuce, tomato, and special sause.</p>
+    </div>
+    <div class="menu-card">
+        <div class="item-header"><h3 class="item-title">Crispy Chicken Burger / Submarine</h3><span class="item-price">1350/=</span></div>
+    </div>
+    <div class="menu-card">
+        <div class="item-header"><h3 class="item-title">Vegetable Sub</h3><span class="item-price">950/=</span></div>
+        <p class="item-desc">Lettuce, tomato, cucumber, pepper, onions, cheese.</p>
+    </div>
+
+    <h2 class="section-title">Sandwiches</h2>
+    <div class="menu-card">
+        <div class="item-header"><h3 class="item-title">Club Sandwich</h3><span class="item-price">1400/=</span></div>
+        <p class="item-desc">Triple decker with chicken, egg, cheese, and vegetables.</p>
+    </div>
+    <div class="menu-card">
+        <div class="item-header"><h3 class="item-title">Chicken & Cheese Sandwich</h3><span class="item-price">1100/=</span></div><p class="item-desc">Chicken, cheese, onion, lettuce, mayo.</p>
+    </div>
+
+    <h2 class="section-title">Grill & BBQ</h2>
+    <div class="menu-card">
+        <div class="item-header"><h3 class="item-title">Chicken Kebab Plate</h3><span class="item-price">1650/=</span></div>
+    </div>
+    <div class="menu-card">
+        <div class="item-header"><h3 class="item-title">Grilled Fish / Beef</h3><span class="item-price">1950/=</span></div>
+    </div>
+    <div class="menu-card">
+        <div class="item-header"><h3 class="item-title">BBQ Sausage Platter</h3><span class="item-price">1200/=</span></div>
+    </div>
+
+    <h2 class="section-title">Pasta & Spaghetti</h2>
+    <div class="menu-card">
+        <div class="item-header"><h3 class="item-title">Spaghetti Bolognese</h3><span class="item-price">1550/=</span></div>
+        <p class="item-desc">Beef and tomato paste over classic spaghetti.</p>
+    </div>
+    <div class="menu-card">
+        <div class="item-header"><h3 class="item-title">Grilled Chicken Alfredo</h3><span class="item-price">1750/=</span></div>
+        <p class="item-desc">Parmesan sause tossed with fettuccine and butter with chicken grilled.</p>
+    </div>
+    <div class="menu-card">
+        <div class="item-header"><h3 class="item-title">Pasta Carbonara</h3><span class="item-price">1650/=</span></div>
+        <p class="item-desc">Creamy egg-based sause with crispy pancetta and black pepper.</p>
+    </div>
+    <div class="menu-card">
+        <div class="item-header"><h3 class="item-title">Pink Sauce Pasta</h3><span class="item-price">1500/=</span></div><p class="item-desc">Creamy fusion of rich, tomato sause and fresh cream, fosted with past & finish.</p>
+    </div>
+
+    <h2 class="section-title">Pizza Selection</h2>
+    <div class="menu-card">
+        <div class="item-header"><h3 class="item-title">Seafood Supreme</h3><span class="item-price">2450/=</span></div><p class="item-desc">Prawns, Tuna, Calamari, Onions, Capsicum, and capes.</p>
+    </div>
+    <div class="menu-card">
+        <div class="item-header"><h3 class="item-title">Spicy Devilled Chicken</h3><span class="item-price">2150/=</span></div>
+        <p class="item-desc">Chicken, onion, garlic, bellpepper, chilly pieces, tomato cancasse sause, basil pesta with mozzarella.</p>
+    </div>
+    <div class="menu-card">
+        <div class="item-header"><h3 class="item-title">Margarita / Cheesy Lovers</h3><span class="item-price">1850/=</span></div>
+        <p class="item-desc">Mozzarella, tomato sause, parmesan cheese.</p>
+    </div>
+
+    <h2 class="section-title">Rice, Noodles & Kottu</h2>
+    <div class="menu-card">
+        <div class="item-header"><h3 class="item-title">Dolphin Kottu</h3><span class="item-price">1350/=</span></div>
+    </div>
+    <div class="menu-card">
+        <div class="item-header"><h3 class="item-title">Special Nasigoreng</h3><span class="item-price">1550/=</span></div>
+    </div>
+    <div class="menu-card">
+        <div class="item-header"><h3 class="item-title">Mixed Fried Rice / Noodles</h3><span class="item-price">1450/=</span></div>
+    </div>
+    <div class="menu-card">
+        <div class="item-header"><h3 class="item-title">Hyderabadi Biriyani</h3><span class="item-price">1750/=</span></div>
+    </div>
+
+    <h2 class="section-title">Rotti & Sides</h2>
+    <div class="menu-card">
+        <div class="item-header"><h3 class="item-title">Naan Rotti / Parata</h3><span class="item-price">150/= each</span></div>
+        <p class="item-desc">Served with your choice of gravy.</p>
+    </div>
+
+    <footer style="text-align: center; margin-top: 50px; color: #999; padding-bottom: 50px;">
+        <p>All prices are in LKR and subject to 10% service charge.</p>
+    </footer>
+</div>
+
+</body>
+</html>
