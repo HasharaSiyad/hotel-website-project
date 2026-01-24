@@ -2,23 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="KK3Kk1OWHpyD3vV0OD9adaop1coW_kZNqWZHQ_noGuQ" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ella Heritage Hotel | Boutique Hotel in Ella, Sri Lanka</title>
-<meta name="description" content="Official site of Ella Heritage Hotel — rooms, views, amenities, and booking info.">
+    <title>Ella Heritage Hotel</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav>
         <div class="logo">
-        <img src="logo.jpeg" alt="Grand Oasis Logo" class="header-logo">
+        <img src="logo.jpeg" alt="Ella Heritage Logo" class="header-logo">
         <span>ELLA HERITAGE HOTEL</span></div>
         <ul>
             <li><a href="#rooms">Rooms</a></li>
             <li><a href="#dining">Dining</a></li>
             <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#message">Message Us</a></li>
             <li><a href="#reserve">Find Us</a></li>
+            
+            
         </ul>
     </nav>
 
@@ -120,11 +121,11 @@
         <div class="gallery-item"><img src="bar.jpeg" alt="Bar"></div>
         <div class="gallery-item"><img src="1.jpeg" alt="Night View"></div>
         <div class="gallery-item"><img src="2.jpeg" alt="Bar"></div>
-        <div class="gallery-item"><img src="3.jpeg" alt="Night View"></div>
-         <div class="gallery-item"><img src="4.jpeg" alt="Bar"></div>
-        <div class="gallery-item"><img src="5.jpeg" alt="Night View"></div>
-        <div class="gallery-item"><img src="6.jpeg" alt="Bar"></div>
-        <div class="gallery-item"><img src="7.jpeg" alt="Night View"></div>
+        <div class="gallery-item"><img src="ph1.jpeg" alt="Night View"></div>
+         <div class="gallery-item"><img src="7.jpeg" alt="Bar"></div>
+        <div class="gallery-item"><img src="ph7.jpeg" alt="Night View"></div>
+        <div class="gallery-item"><img src="ph5.jpeg" alt="Bar"></div>
+        <div class="gallery-item"><img src="ph6.jpeg" alt="Night View"></div>
     </div>
 </section>
     <div class="container">
@@ -138,6 +139,130 @@
             <br><br><strong>- Miguel Angel Arias (Google).</strong>
         </div>
     </div>
+
+    <section id="contact" class="contact-section">
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Get In Touch</h2>
+            <div class="info-item">
+                <span class="icon">📞</span>
+                <div>
+                    <h4>Telephone</h4>
+                    <p><a href="tel:+94767333654">+94 76 733 3654</a></p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <span class="icon">💬</span>
+                <div>
+                    <h4>WhatsApp</h4>
+                    <p><a href="https://wa.me/94767333654" target="_blank">+94 733 3654</a></p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <span class="icon">📍</span>
+                <div>
+                    <h4>Address</h4>
+                    <p>Ella-Passara Road, Ella, Sri Lanka</p>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.3647463665!2d81.0505!3d6.8714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNTInMTcuMCJOIDgxwrAwMycwMS44IkU!5e0!3m2!1sen!2slk!4v1705900000000!5m2!1sen!2slk" 
+                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="contact-form-box" id="message">
+            <h3>Send us a Message</h3>
+            <form action="https://formspree.io/f/xbdgpgoq" method="POST">
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" name="guest_name" placeholder="Enter your full name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="_replyto" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Your Message</label>
+                    <textarea name="message" rows="5" placeholder="How can we help you?" required></textarea>
+                </div>
+
+                <button type="submit" class="send-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section id="reserve" class="booking-section">
+    <div class="booking-container">
+        <div class="booking-header">
+            <h2>Reserve Your Stay</h2>
+            <p>Experience the heritage and beauty of Ella</p>
+        </div>
+
+        <div class="booking-form-wrapper">
+            <form action="https://formspree.io/f/xbdgpgoq" method="POST">
+                <input type="hidden" name="_next" value="thank-you.html">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" name="guest_name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Telephone</label>
+                        <input type="tel" name="phone" placeholder="+94 7X XXX XXXX" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="_replyto" placeholder="ella@example.com" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Check-in Date</label>
+                        <input type="date" name="check_in" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Check-out Date</label>
+                        <input type="date" name="check_out" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Adults</label>
+                        <input type="number" name="adults" min="1" value="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Children</label>
+                        <input type="number" name="children" min="0" value="0">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Special Requests</label>
+                    <textarea name="special_notes" rows="4" placeholder="Tell us about dietary needs, airport pickup, or special occasions..."></textarea>
+                </div>
+
+                <button type="submit" class="booking-btn">Send Us a Message</button>
+                
+                <p class="form-notice">
+                    <small>Notice: We will get back to you on the email address provided above to confirm your reservation.</small>
+                </p>
+            </form>
+        </div>
+    </div>
+</section>
 
     
     <section class="booking-links" id="reserve">
@@ -203,6 +328,4 @@
 </body>
 </html>
 
-
     
-
