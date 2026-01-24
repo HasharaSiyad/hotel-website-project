@@ -199,6 +199,147 @@ h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; font-weight: 300;
     border-radius: 8px; 
 }
 
+.contact-section {
+    padding: 80px 20px;
+    background-color: #fdfaf5; /* Soft cream background */
+}
+
+.contact-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact-info h2 { color: #1a1a1a; margin-bottom: 30px; }
+
+.info-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.info-item h4 { margin: 0; color: #b8926a; text-transform: uppercase; font-size: 0.9rem; }
+.info-item p { margin: 5px 0 0; color: #555; }
+.info-item a { color: inherit; text-decoration: none; transition: 0.3s; }
+.info-item a:hover { color: #b8926a; }
+
+.map-container {
+    margin-top: 30px;
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Form Styling */
+.contact-form-box {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: bold; color: #333; }
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.send-btn {
+    background: #b8926a;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.send-btn:hover { background: #1a1a1a; }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .contact-container { grid-template-columns: 1fr; }
+}
+
+.booking-section {
+    padding: 80px 20px;
+    background-color: #ffffff;
+}
+
+.booking-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.booking-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.booking-header h2 {
+    font-size: 2.2rem;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.booking-form-wrapper {
+    background: #fffdf9;
+    padding: 40px;
+    border: 1px solid #f1e5d5;
+    border-radius: 8px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.booking-btn {
+    background: #b8926a; /* Your signature gold */
+    color: white;
+    border: none;
+    padding: 18px;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border-radius: 4px;
+}
+
+.booking-btn:hover {
+    background: #1a1a1a;
+}
+
+.form-notice {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+    font-style: italic;
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
 /* Booking Form */
 .booking-form { background: #1a1a1a; color: white; padding: 40px; border-radius: 8px; }
 .booking-form h2 { color: white; border: none; }
@@ -396,3 +537,19 @@ h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; font-weight: 300;
         justify-content: center;
     }
 }
+
+
+
+
+
+
+
+:root {
+    --deep-cocoa: #2c1e14;       /* Rich wood tone */
+    --royal-gold: #c5a059;       /* Metallic gold */
+    --parchment: #fcf9f2;        /* Elegant off-white */
+    --ivory-white: #ffffff;      
+    --soft-shadow: 0 10px 30px rgba(44, 30, 20, 0.08);
+    --gold-gradient: linear-gradient(135deg, #c5a059 0%, #ecd08d 100%);
+}
+
