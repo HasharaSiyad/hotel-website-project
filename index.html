@@ -5,24 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ella Heritage Hotel</title>
     <link rel="stylesheet" href="style.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+    
 </head>
 <body>
 
-    <nav>
-        <div class="logo">
-        <img src="logo.jpeg" alt="Ella Heritage Logo" class="header-logo">
-        <span>ELLA HERITAGE HOTEL</span></div>
-        <ul>
-            <li><a href="#rooms">Rooms</a></li>
-            <li><a href="#dining">Dining</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#message">Message Us</a></li>
-            <li><a href="#reserve">Find Us</a></li>
-            
-            
-        </ul>
-    </nav>
+<nav>
+    <div class="logo">
+        <span>ELLA HERITAGE</span>
+    </div>
 
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <ul id="nav-links">
+        <li><a href="#rooms" onclick="toggleMenu()">Rooms</a></li>
+        <li><a href="#dining" onclick="toggleMenu()">Dining</a></li>
+        <li><a href="#gallery" onclick="toggleMenu()">Gallery</a></li>
+        <li><a href="#reserve" onclick="toggleMenu()">Message Us</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Find Us</a></li>
+    </ul>
+</nav>
+   
     <div class="hero">
         <div class="hero-text">
             <h1>Nature’s Comfort in Ella</h1>
@@ -156,7 +167,7 @@
                 <span class="icon">💬</span>
                 <div>
                     <h4>WhatsApp</h4>
-                    <p><a href="https://wa.me/94767333654" target="_blank">+94 76 733 3654</a></p>
+                    <p><a href="https://wa.me/94767333654" target="_blank">+94 733 3654</a></p>
                 </div>
             </div>
 
@@ -178,7 +189,8 @@
 
         <div class="contact-form-box" id="message">
             <h3>Send us a Message</h3>
-            <form action="https://formspree.io/f/xbdgpgoq" method="POST">
+            <form action="https://formspree.io/f/mbdgvavd" method="POST">
+                <input type="hidden" name="_next" value="thank-you.html">
                 <div class="form-group">
                     <label>Your Name</label>
                     <input type="text" name="guest_name" placeholder="Enter your full name" required>
@@ -208,8 +220,9 @@
         </div>
 
         <div class="booking-form-wrapper">
-            <form action="https://formspree.io/f/xbdgpgoq" method="POST">
+            <form action="https://formspree.io/f/mbdgvavd" method="POST">
                 <input type="hidden" name="_next" value="thank-you.html">
+
                 
                 <div class="form-row">
                     <div class="form-group">
@@ -325,8 +338,34 @@
         <p>&copy; 2026 Ella Heritage Hotel. All Rights Reserved.</p>
     </div>
 </footer>
+
+
+<script>
+  const form = document.querySelector('form');
+  form.onsubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (response.ok) {
+      // This forces the redirect to your local file
+      window.location.href = "thank-you.html";
+    } else {
+      alert("Submission failed. Please check your internet connection.");
+    }
+  };
+</script>
+
+<script>
+function toggleMenu() {
+    const navLinks = document.getElementById("nav-links");
+    navLinks.classList.toggle("show");
+}
+</script>
 </body>
 </html>
 
     
-
