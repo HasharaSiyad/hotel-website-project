@@ -47,6 +47,113 @@ nav {
     z-index: 1000;
 }
 
+
+/* Base Icon Styling */
+.menu-icon {
+    display: none; /* Hidden on desktop */
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #c5a059; /* Your gold color */
+    transition: 0.3s;
+}
+
+/* Mobile View (Below 768px) */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: flex; /* Show icon on mobile */
+    }
+
+    #nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    /* This class is added by JavaScript */
+    #nav-links.show {
+        display: flex !important;
+    }
+}
+
+/* Desktop View (Above 768px) */
+@media (min-width: 769px) {
+    #nav-links {
+        display: flex !important;
+        list-style: none;
+        gap: 20px;
+    }
+}
+
+
+/* Hide standard menu on mobile and setup icon */
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: var(--royal-gold); /* Using your gold color */
+    transition: 0.3s;
+}
+
+/* Menu styling */
+#nav-links {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-bottom: 2px solid var(--royal-gold);
+}
+
+/* Show menu when "active" class is added */
+#nav-links.active {
+    display: flex;
+}
+
+#nav-links li {
+    margin: 15px 0;
+}
+
+/* For larger screens: Show the full menu, hide the icon */
+@media (min-width: 769px) {
+    .menu-icon { display: none; }
+    #nav-links {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        width: auto;
+        background: transparent;
+        box-shadow: none;
+        border: none;
+    }
+    #nav-links li { margin: 0 15px; }
+}
 .logo { 
     font-size: 1.5rem; 
     font-weight: bold; 
