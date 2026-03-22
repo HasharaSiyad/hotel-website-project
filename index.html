@@ -390,51 +390,74 @@
 
 
 <script>
-// 1. Shrink Header on Scroll
+/**
+ * 1. TOGGLE MENU FUNCTION
+ * This handles opening and closing the mobile menu
+ */
+function toggleMenu() {
+    const navLinks = document.getElementById("nav-links");
+    if (navLinks) {
+        navLinks.classList.toggle("show");
+    }
+}
+
+/**
+ * 2. SHRINK HEADER ON SCROLL
+ * Makes the navigation bar smaller and more solid when scrolling
+ */
 window.onscroll = function() {
     const nav = document.querySelector("nav");
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        nav.style.padding = "10px 5%";
-        nav.style.backgroundColor = "rgba(253, 250, 245, 0.98)"; // Becomes more solid
-    } else {
-        nav.style.padding = "15px 5%";
-        nav.style.backgroundColor = "rgba(253, 250, 245, 0.85)"; // Becomes more transparent
+    if (nav) {
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            nav.style.padding = "10px 5%";
+            nav.style.backgroundColor = "rgba(253, 250, 245, 0.98)";
+        } else {
+            nav.style.padding = "15px 5%";
+            nav.style.backgroundColor = "rgba(253, 250, 245, 0.85)";
+        }
     }
 };
 
-// 2. Smooth Scrolling for all links
+/**
+ * 3. SMOOTH SCROLLING
+ * Makes the page slide gently when clicking menu links
+ */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        const targetId = this.getAttribute('href');
+        if (targetId === "#") return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            e.preventDefault();
+            targetElement.scrollIntoView({
+                behavior: 'smooth'
+            });
+            
+            // Auto-close menu on mobile after clicking a link
+            const navLinks = document.getElementById("nav-links");
+            if (navLinks.classList.contains("show")) {
+                navLinks.classList.remove("show");
+            }
+        }
     });
 });
-</script>
 
-
-
-
-
-<script>
-window.addEventListener( "pageshow", function ( event ) {
-  var historyTraversal = event.persisted || 
-                         ( typeof window.performance != "undefined" && 
-                           window.performance.navigation.type === 2 );
-  if ( historyTraversal ) {
-    // Handle page restore.
-    window.location.reload();
-  }
+/**
+ * 4. BACK BUTTON FIX (PAGESHOW)
+ * Forces the page to refresh when using the back button to avoid seeing old versions
+ */
+window.addEventListener("pageshow", function (event) {
+    var historyTraversal = event.persisted || 
+                         (typeof window.performance != "undefined" && 
+                          window.performance.navigation.type === 2);
+    if (historyTraversal) {
+        window.location.reload();
+    }
 });
 </script>
 
-
-
-</body>
-</html>
-
-    
+</body> </html>
 
 
 
