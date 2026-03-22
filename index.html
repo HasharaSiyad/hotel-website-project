@@ -10,6 +10,15 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
 
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+
+
+
+
     
 </head>
 <body>
@@ -29,18 +38,19 @@
         <li><a href="#rooms" onclick="toggleMenu()">Rooms</a></li>
         <li><a href="#dining" onclick="toggleMenu()">Dining</a></li>
         <li><a href="#gallery" onclick="toggleMenu()">Gallery</a></li>
-        <li><a href="#contact" onclick="toggleMenu()">Message Us</a></li>
-        <li><a href="#reserve" onclick="toggleMenu()">Find Us</a></li>
+        <li><a href="#reserve" onclick="toggleMenu()">Message Us</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Find Us</a></li>
     </ul>
 </nav>
    
-    <div class="hero">
-        <div class="hero-text">
-            <h1>Nature’s Comfort in Ella</h1>
-            <p>Enjoy a peaceful stay with stunning views of Ella Rock, surrounded by fresh mountain air and lush greenery. Our hotel offers the perfect escape to relax and reconnect with natures.</p>
-        </div>
+   <section class="hero">
+    <div class="hero-text">
+        <h1 style="font-size: 3.5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.5);">Nature’s Comfort in Ella</h1>
+        <p style="font-size: 1.2rem; margin-bottom: 30px;">Enjoy a peaceful stay with stunning views of Ella Rock.</p>
+        
+        <a href="#reserve" class="hero-btn">Book Your Stay</a>
     </div>
-
+</section>
     
         
   <div class="container" id="rooms">
@@ -84,6 +94,45 @@
         </div>
 
     </div> </div> 
+
+
+
+
+
+
+
+
+    <section class="jacuzzi-section">
+    <div class="container">
+        <div class="jacuzzi-flex">
+            <div class="jacuzzi-image">
+                <!-- Replace 'jacuzzi-view.jpg' with your actual image name -->
+                <img src="pool.jpeg" alt="Jacuzzi overlooking Ella Rock">
+            </div>
+            <div class="jacuzzi-text">
+                <span class="sub-title">Ultimate Relaxation</span>
+                <h2>Mountain View Jacuzzi</h2>
+                <p>Immerse yourself in warmth while gazing at the majestic Ella Rock. Our luxury jacuzzi offers a front-row seat to the beauty of the mountain range, perfect for relaxing after a long hike.</p>
+                <div class="price-tag">
+                    <span class="price-amount">Rs. 2,000</span>
+                    <span class="price-detail">per person / hour</span>
+                </div>
+                <a href="#reserve" class="reserve-btn">Book Your Slot</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -190,7 +239,7 @@
         <div class="contact-form-box" id="message">
             <h3>Send us a Message</h3>
             <form action="https://formspree.io/f/mbdgvavd" method="POST">
-                <input type="hidden" name="_next" value="https://https://hasharasiyad.github.io/hotel-website-project//thank-you.html">
+                <input type="hidden" name="_next" value="thank-you.html">
                 <div class="form-group">
                     <label>Your Name</label>
                     <input type="text" name="guest_name" placeholder="Enter your full name" required>
@@ -221,7 +270,7 @@
 
         <div class="booking-form-wrapper">
             <form action="https://formspree.io/f/mbdgvavd" method="POST">
-                <input type="hidden" name="_next" value="https://https://hasharasiyad.github.io/hotel-website-project//thank-you.html">
+                <input type="hidden" name="_next" value="thank-you.html">
 
                 
                 <div class="form-row">
@@ -341,36 +390,47 @@
 
 
 <script>
-  const form = document.querySelector('form');
-  form.onsubmit = async (e) => {
-    e.preventDefault();
-    const formData = new FormData(form);
-    const response = await fetch(form.action, {
-      method: 'POST',
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    });
-    if (response.ok) {
-      // This forces the redirect to your local file
-      window.location.href = "thank-you.html";
+// 1. Shrink Header on Scroll
+window.onscroll = function() {
+    const nav = document.querySelector("nav");
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        nav.style.padding = "10px 5%";
+        nav.style.backgroundColor = "rgba(253, 250, 245, 0.98)"; // Becomes more solid
     } else {
-      alert("Submission failed. Please check your internet connection.");
+        nav.style.padding = "15px 5%";
+        nav.style.backgroundColor = "rgba(253, 250, 245, 0.85)"; // Becomes more transparent
     }
-  };
+};
+
+// 2. Smooth Scrolling for all links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
 </script>
+
+
+
+
 
 <script>
-function toggleMenu() {
-    const navLinks = document.getElementById("nav-links");
-    navLinks.classList.toggle("show");
-}
-
-
-
-    <meta name="description" content="Luxury hotel restaurant offering breakfast, bar and a la carte dining experience.">
-<meta name="keywords" content="hotel restaurant, breakfast, bar, dining">
-<meta name="author" content="Hashara Siyad">
+window.addEventListener( "pageshow", function ( event ) {
+  var historyTraversal = event.persisted || 
+                         ( typeof window.performance != "undefined" && 
+                           window.performance.navigation.type === 2 );
+  if ( historyTraversal ) {
+    // Handle page restore.
+    window.location.reload();
+  }
+});
 </script>
+
+
+
 </body>
 </html>
 
